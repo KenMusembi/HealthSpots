@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class UpdateHopsitalPaymentsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('hospital_payments', function (Blueprint $table) {
+            //
+          //  $table->string('status');
+
+            $table->biginteger('hospital_id')->unsigned();
+            $table->foreign('hospital_id')->references('id')->on('hospitals');
+            $table->biginteger('payment_method_id')->unsigned();
+            $table->foreign('payment_method_id')->references('id')->on('payment_methods');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('hospital_payments', function (Blueprint $table) {
+            //
+        });
+    }
+}
