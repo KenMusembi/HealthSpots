@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/hospitals', [HospitalController::class, 'get_web']);
+Route::get('/hospital', [HospitalController::class, 'get_web']);
 
-Route::get('/admin', [HospitalController::class, 'get_admin']);
+//Route::get('/hospitals', [HospitalController::class, 'getBasicData']);
+
+Route::get('/hospitals', [HospitalController::class, 'getBasicData'])->name('hospitals.getBasicData');

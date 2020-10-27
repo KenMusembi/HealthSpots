@@ -9,6 +9,10 @@ class Hospital extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'County', 'id', 'Name', 'Officialname', 'created_at', 'updated_at',
+    ];
+
     public function paymentmethods(){
         return $this->hasMany('App\PaymentMethods');
     }
