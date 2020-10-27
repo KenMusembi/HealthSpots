@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HospitalController;
+use App\Http\Resources\Hospital as HospitalResource;
+use App\Models\Hospital;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,4 +26,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Route::get('/v1/hospitals', function (Request $request) {return response()->json([ 'kenyatta'=> [ 'registration'=> 'ABC001', 'dateRegistered'=> '2019-01-01', 'color'=> 'black', 'make'=> 'tesla', 'model'=> 's']], 200);});
 
-Route::get('/v1/hospitals', [HospitalController::class, 'get']);
+Route::get('/v1/hospitals', [HospitalController::class, 'index']);
+
+Route::post('/v1/hospitals', function () {
+    return new HospitalResource(Hospital::find(100));
+});
+//all()
