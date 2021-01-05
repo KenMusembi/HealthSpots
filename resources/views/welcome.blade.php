@@ -11,12 +11,32 @@
       <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Hospitals Kenya</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact_us">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#"></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <div class="container">
     <div class="row">
         <div class="col-md-12 mt-5">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h3><strong>Hospitals Kenya</strong></h3>
+                    <h3><strong>View all Health Facilities in Kenya</strong></h3>
                 </div>
             </div>
             <table class="table table-bordered table-striped data-table hover" cellspacing="0" width="100%">
@@ -41,7 +61,20 @@
             </table>
         </div>
     </div>
+    <br>
+    <div class="card text-center" id="contact_us">
+      <div class="card-header">
+        Contact Us
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Get in touch with us for feedback</h5>
+        <p class="card-text">Email: kemusmebi21@gmail.com.</p>
+        <p class="card-text">Phone: +254 748 050 434.</p>
+      </div>
+    </div>
 </div>
+<br>
+
 </body>
 <script type="text/javascript">
   $(function () {
